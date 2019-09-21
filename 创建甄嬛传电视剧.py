@@ -11,7 +11,6 @@ i = 1
 while i < 11:
     file_name = "甄嬛传%d.txt"%i
     f = open(file_name,"w")
-    
     f.write(str(i))
     f.close()
     i+=1
