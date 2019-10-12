@@ -1,12 +1,12 @@
 # 1.打印功能提示
-print("="*30)
+print("=" * 30)
 print(" 名片管理系统 V1.0.0")
 print(" 1. 添加一个新的名片")
 print(" 2. 删除一个名片")
 print(" 3. 修改一个名片")
 print(" 4. 查询一个名片")
 print(" 5. 退出系统")
-print("="*30)
+print("=" * 30)
 
 # 2.获取用户的输入
 
@@ -22,11 +22,7 @@ while True:
         new_addr = input("请输入新的住址:")
 
         # 定义一个新的字典
-        new_info = {}
-        new_info["name"] = new_name
-        new_info["weixin"] = new_weixin
-        new_info["qq"] = new_qq
-        new_info["addr"] = new_addr
+        new_info = {"name": new_name, "weixin": new_weixin, "qq": new_qq, "addr": new_addr}
         list.append(new_info)
         print(list)
         pass
@@ -39,16 +35,16 @@ while True:
         find_flag = 0
         for temp in list:
             if find_name == temp["name"]:
-                print("%s\t%s\t%s\t%s"%(temp["name"],temp["qq"],temp["weixin"],temp["addr"]))
-                find_flag = 1 #表示找到了
-                break #跳出循环
+                print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
+                find_flag = 1  # 表示找到了
+                break  # 跳出循环
         if find_flag == 0:
             print("查无此人")
         pass
     elif num == 5:
         print("姓名\t\tQQ\t\t微信\t\t住址")
         for temp in list:
-            print("%s\t%s\t%s\t%s"%(temp["name"],temp["qq"],temp["weixin"],temp["addr"]))
+            print("%s\t%s\t%s\t%s" % (temp["name"], temp["qq"], temp["weixin"], temp["addr"]))
     elif num == 6:
         break
     else:

@@ -1,5 +1,5 @@
-print(len("dsdsd"))
+print(len("dsDsd"))
 
-for value in "dadsd":
+for value in "daDsd":
     print("--------")
     print(value)
